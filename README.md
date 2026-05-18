@@ -2,9 +2,49 @@
 
 > An intelligent personal knowledge base with powerful managed agents, for macOS.
 
-This repository hosts public, downloadable builds of [Guace](https://github.com/leesta24/guace). The source code itself lives in a private repository.
+This repository hosts public, downloadable builds of Guace. The source code itself lives in a private repository.
 
-## Latest
+---
+
+## What is Guace?
+
+Guace is a **local-first knowledge tool** for people who think by writing. It combines three things you'd otherwise glue together by hand:
+
+1. **A markdown vault** you fully own (Obsidian-compatible — plain `.md` files on disk under `~/Documents/Guace/vault/`).
+2. **A chat agent** that lives next to your notes. It can read, write, and refactor them with regular tools (`read` / `write` / `edit` / `bash`), pull web pages into the vault, and remember things you tell it about yourself in a long-lived `user.md`.
+3. **Managed agents** for the heavy lifting. When a job needs a dedicated worker — code refactors, deep research, multi-file edits — Guace dispatches it to **Claude Code** or **OpenAI Codex CLI** running in an isolated workspace, then brings the result back into the chat so you can save it to the vault.
+
+The mental model is a loop:
+
+> **capture → refine → dispatch when needed → review the artifact → save back to the vault → recall later.**
+
+Unlike a cloud chatbot, Guace runs entirely on your machine. Your notes never leave your disk; API keys live in macOS Keychain; LLM requests go straight from your computer to the provider you chose.
+
+## Why you might want it
+
+- You already keep markdown notes (Obsidian, plain folders, an existing vault) and want an agent that can actually edit them.
+- You use Claude Code / Codex daily and want a chat-style "manager" that decides when to delegate to them.
+- You don't want a SaaS — you want the data, the prompts, and the keys to stay on your laptop.
+- You've felt the pain of context windows and want a tool that's honest about cache hits, token cost, and what it's actually doing.
+
+## Highlights
+
+- **Vault editor** — live markdown preview with wikilinks (`[[Page]]`), embeds (`![[Page]]`), headings outline, hashtag indexing, frontmatter, image / PDF / HTML preview.
+- **Daemon-backed architecture** — long-running tasks survive Electron restarts; the UI is just a client.
+- **Approval prompts** on destructive shell ops (`rm`, `git reset --hard`, `sudo`, force-push…). Approve once, "always this session", or deny.
+- **Usage dashboard** — per-model token / cost breakdown, cache hit rate, daily volume chart. Powered by real provider usage data, not estimates.
+- **Checklist tool** — dashboard checklist the agent can also read / mutate via a tool call, so "remind me to X" actually persists.
+- **Managed agent orchestration** — dispatch tasks to Claude Code / Codex; follow up, cancel, or save results to the vault.
+- **Multi-provider** — Vercel AI Gateway (Anthropic / OpenAI / DeepSeek / Google through one key) or DeepSeek's API directly. More backends planned.
+- **No telemetry, no analytics.**
+
+## Status
+
+Pre-1.0. Schemas are still moving, the .dmg isn't notarised, and you're trusting an unverified app to run a shell tool on your machine. Don't dispatch anything you wouldn't run by hand.
+
+---
+
+## Latest builds
 
 | Platform | Download | Notes |
 | --- | --- | --- |
@@ -34,12 +74,14 @@ xattr -dr com.apple.quarantine /Applications/Guace.app
 
 Then double-click as normal.
 
-## What you need to bring
+## First-run setup
 
-Guace is a chat front-end + orchestrator on top of your own keys / tools. First-time setup:
+Guace is a chat front-end + orchestrator on top of *your* keys and *your* tools. After launch:
 
-1. **An LLM provider key** — Vercel AI Gateway, DeepSeek, etc. Add it via *Settings → Models & Providers*. Keys are stored in macOS Keychain only — never on disk, never uploaded.
-2. **(Optional) A managed agent CLI** — install [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code) or [OpenAI Codex CLI](https://github.com/openai/codex) on your PATH. Add it under *Agents*; Guace will dispatch heavy tasks to it.
+1. **Add an LLM provider key** — Vercel AI Gateway, DeepSeek, etc. Settings → *Models & Providers*. Keys stay in macOS Keychain only.
+2. **(Optional) Register a managed agent** — install [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code) or [OpenAI Codex CLI](https://github.com/openai/codex) so it's on your PATH, then add it under *Agents*. Guace will dispatch heavy tasks to it.
+
+That's it — you can start a session and type. Try `"create a note at projects/2026-roadmap.md with these bullets: …"` to see the agent touch the vault.
 
 ## Where data lives
 
@@ -51,11 +93,7 @@ Guace is a chat front-end + orchestrator on top of your own keys / tools. First-
 | Task workspaces | `~/Documents/Guace/workspaces/` |
 | Provider API keys | macOS Keychain — service `ai.guace.daemon` |
 
-Uninstall = drag Guace from Applications + delete those directories (the keychain entries are reusable across reinstalls; remove them via Keychain Access if you want a clean slate).
-
-## Status
-
-Pre-1.0. Expect rough edges. This isn't notarised yet, the schemas are still moving, and you're trusting an unverified .dmg to run a shell tool on your machine. Don't dispatch anything you wouldn't run by hand.
+Uninstall = drag Guace from Applications + delete those directories. (Keychain entries are reusable across reinstalls; remove them via Keychain Access if you want a clean slate.)
 
 ## Reporting bugs
 
