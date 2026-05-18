@@ -1,8 +1,10 @@
-# Guace
+<p align="center">
+  <img src="./guace-wordmark.png" alt="Guace" width="420" />
+</p>
 
-### An intelligent personal knowledge base with powerful managed agents.
+<h3 align="center">An intelligent personal knowledge base with powerful managed agents.</h3>
 
-*For macOS · local-first · your keys, your files, your machine.*
+<p align="center"><em>For macOS · local-first · your keys, your files, your machine.</em></p>
 
 This repository hosts public, downloadable builds. The source itself lives in a private repository.
 
