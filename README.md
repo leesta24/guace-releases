@@ -1,24 +1,25 @@
-# Guace — Releases
+# Guace
 
-> An intelligent personal knowledge base with powerful managed agents, for macOS.
+### An intelligent personal knowledge base with powerful managed agents.
 
-This repository hosts public, downloadable builds of Guace. The source code itself lives in a private repository.
+*For macOS · local-first · your keys, your files, your machine.*
+
+This repository hosts public, downloadable builds. The source itself lives in a private repository.
 
 ---
 
 ## What is Guace?
 
-Guace is a **local-first knowledge tool** for people who think by writing. It combines three things you'd otherwise glue together by hand:
+Two things, married into one app:
 
-1. **A markdown vault** you fully own (Obsidian-compatible — plain `.md` files on disk under `~/Documents/Guace/vault/`).
-2. **A chat agent** that lives next to your notes. It can read, write, and refactor them with regular tools (`read` / `write` / `edit` / `bash`), pull web pages into the vault, and remember things you tell it about yourself in a long-lived `user.md`.
-3. **Managed agents** for the heavy lifting. When a job needs a dedicated worker — code refactors, deep research, multi-file edits — Guace dispatches it to **Claude Code** or **OpenAI Codex CLI** running in an isolated workspace, then brings the result back into the chat so you can save it to the vault.
+- **A personal knowledge base** — every conversation, fact, and decision lives in *your* markdown vault on *your* disk. The agent reads it as long-term memory and writes back to it as you think. Obsidian-compatible (plain `.md` under `~/Documents/Guace/vault/`).
+- **Managed agents** — when a job needs a real worker (multi-file refactor, deep research, long-horizon task), Guace dispatches it to **Claude Code** or **OpenAI Codex CLI** running in its own isolated workspace, watches the result, and brings the artifact back so you can fold it into the vault.
 
-The mental model is a loop:
+The loop the product is optimised for:
 
 > **capture → refine → dispatch when needed → review the artifact → save back to the vault → recall later.**
 
-Unlike a cloud chatbot, Guace runs entirely on your machine. Your notes never leave your disk; API keys live in macOS Keychain; LLM requests go straight from your computer to the provider you chose.
+Unlike a cloud chatbot, nothing about your knowledge leaves your machine. Notes stay on disk, API keys live in macOS Keychain, LLM requests go straight from your computer to the provider you chose. No telemetry, no analytics.
 
 ## Why you might want it
 
