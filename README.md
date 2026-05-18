@@ -6,6 +6,10 @@
 
 <p align="center"><em>For macOS · local-first · your keys, your files, your machine.</em></p>
 
+<p align="center">
+  <img src="./guace-screenshot.png" alt="Guace dashboard and chat" width="900" />
+</p>
+
 This repository hosts public, downloadable builds. The source itself lives in a private repository.
 
 ---
@@ -14,8 +18,10 @@ This repository hosts public, downloadable builds. The source itself lives in a 
 
 Two things, married into one app:
 
-- **A personal knowledge base** — every conversation, fact, and decision lives in *your* markdown vault on *your* disk. The agent reads it as long-term memory and writes back to it as you think. Obsidian-compatible (plain `.md` under `~/Documents/Guace/vault/`).
+- **A conversational knowledge base** — every note, conversation, fact, and decision lives in *your* markdown vault on *your* disk, and you talk to it in plain language. Ask it to find that thing you wrote three weeks ago, summarise everything you've captured about a project, restructure a messy note, or just *"save this as a fact about me"* — Guace reads the vault as long-term memory and writes back as you think. Obsidian-compatible (plain `.md` under `~/Documents/Guace/vault/`).
 - **Managed agents** — when a job needs a real worker (multi-file refactor, deep research, long-horizon task), Guace dispatches it to **Claude Code** or **OpenAI Codex CLI** running in its own isolated workspace, watches the result, and brings the artifact back so you can fold it into the vault.
+
+The "intelligent" in *intelligent personal knowledge base* isn't only the agents — it's that your notes are a thing you can **chat with**, not a folder you have to grep.
 
 The loop the product is optimised for:
 
@@ -32,6 +38,7 @@ Unlike a cloud chatbot, nothing about your knowledge leaves your machine. Notes 
 
 ## Highlights
 
+- **Chat with your vault** — natural-language search, summarisation, and refactoring across your markdown notes. *"What did I decide about X?"*, *"Pull every TODO I wrote this week into one note"*, *"Remember that I prefer pnpm over npm"* — all just work, on top of plain files you still own.
 - **Vault editor** — live markdown preview with wikilinks (`[[Page]]`), embeds (`![[Page]]`), headings outline, hashtag indexing, frontmatter, image / PDF / HTML preview.
 - **Daemon-backed architecture** — long-running tasks survive Electron restarts; the UI is just a client.
 - **Approval prompts** on destructive shell ops (`rm`, `git reset --hard`, `sudo`, force-push…). Approve once, "always this session", or deny.
