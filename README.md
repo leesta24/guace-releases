@@ -58,8 +58,8 @@ Pre-1.0. Schemas are still moving, the .dmg isn't notarised, and you're trusting
 
 | Platform | Download | Notes |
 | --- | --- | --- |
-| **macOS (Apple Silicon)** | [`Guace-0.0.1-arm64.dmg`](../../releases/latest) | Requires macOS 10.12+ |
-| **macOS (Apple Silicon, zip)** | [`Guace-0.0.1-arm64-mac.zip`](../../releases/latest) | Same payload, no installer |
+| **macOS (Apple Silicon)** | [`Guace-0.0.2-arm64.dmg`](../../releases/latest) | Requires macOS 10.12+ |
+| **macOS (Apple Silicon, zip)** | [`Guace-0.0.2-arm64-mac.zip`](../../releases/latest) | Same payload, no installer |
 
 Intel (`x64`) builds are not produced yet — open an issue if you need one.
 
