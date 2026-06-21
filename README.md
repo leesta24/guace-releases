@@ -2,7 +2,7 @@
   <img src="./guace-wordmark.png" alt="Guace" width="420" />
 </p>
 
-<h3 align="center">An intelligent personal knowledge base with powerful managed agents.</h3>
+<h3 align="center">An AI-native personal knowledge base with powerful managed agents.</h3>
 
 <p align="center"><em>For macOS · local-first · your keys, your files, your machine.</em></p>
 
@@ -21,7 +21,7 @@ Two things, married into one app:
 - **A conversational knowledge base** — every note, conversation, fact, and decision lives in *your* markdown vault on *your* disk, and you talk to it in plain language. Ask it to find that thing you wrote three weeks ago, summarise everything you've captured about a project, restructure a messy note, or just *"save this as a fact about me"* — Guace reads the vault as long-term memory and writes back as you think. Obsidian-compatible (plain `.md` under `~/Documents/Guace/vault/`).
 - **Managed agents** — when a job needs a real worker (multi-file refactor, deep research, long-horizon task), Guace dispatches it to **Claude Code** or **OpenAI Codex CLI** running in its own isolated workspace, watches the result, and brings the artifact back so you can fold it into the vault.
 
-The "intelligent" in *intelligent personal knowledge base* isn't only the agents — it's that your notes are a thing you can **chat with**, not a folder you have to grep.
+The "AI-native" in *AI-native personal knowledge base* isn't only the agents — it's that your notes are a thing you can **chat with**, not a folder you have to grep.
 
 The loop the product is optimised for:
 
