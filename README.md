@@ -50,7 +50,7 @@ Unlike a cloud chatbot, nothing about your knowledge leaves your machine. Notes 
 
 ## Status
 
-Pre-1.0. Schemas are still moving, the .dmg isn't notarised, and you're trusting an unverified app to run a shell tool on your machine. Don't dispatch anything you wouldn't run by hand.
+Pre-1.0. Schemas are still moving, and you're trusting a local-first app to run shell-backed agent tools on your machine. Don't dispatch anything you wouldn't run by hand.
 
 ---
 
@@ -58,10 +58,12 @@ Pre-1.0. Schemas are still moving, the .dmg isn't notarised, and you're trusting
 
 | Platform | Download | Notes |
 | --- | --- | --- |
-| **macOS (Apple Silicon)** | [`Guace-0.0.2-arm64.dmg`](../../releases/latest) | Requires macOS 10.12+ |
-| **macOS (Apple Silicon, zip)** | [`Guace-0.0.2-arm64-mac.zip`](../../releases/latest) | Same payload, no installer |
+| **macOS (Apple Silicon)** | [`Guace-0.0.3-arm64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-arm64.dmg) | Signed + notarized; requires macOS 10.12+ |
+| **macOS (Intel)** | [`Guace-0.0.3-x64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-x64.dmg) | Signed + notarized; requires macOS 10.12+ |
+| **macOS (Apple Silicon, zip)** | [`Guace-0.0.3-arm64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-arm64-mac.zip) | Same payload, no installer |
+| **macOS (Intel, zip)** | [`Guace-0.0.3-x64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-x64-mac.zip) | Same payload, no installer |
 
-Intel (`x64`) builds are not produced yet — open an issue if you need one.
+Checksums are in [`SHA256SUMS.txt`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/SHA256SUMS.txt).
 
 ## Install
 
@@ -69,20 +71,7 @@ Intel (`x64`) builds are not produced yet — open an issue if you need one.
 2. Open the `.dmg`, drag **Guace** to **Applications**.
 3. Launch from Launchpad / Spotlight.
 
-### "App is from an unidentified developer"
-
-Guace isn't (yet) signed with an Apple Developer ID, so macOS Gatekeeper will block the first launch. Two ways around it:
-
-**Right-click route (recommended):**
-1. In **Applications**, right-click **Guace** → **Open**.
-2. Click **Open** in the dialog. macOS remembers your choice forever.
-
-**Terminal route (if Gatekeeper won't budge):**
-```bash
-xattr -dr com.apple.quarantine /Applications/Guace.app
-```
-
-Then double-click as normal.
+The DMG builds are signed and notarized with Apple Developer ID, so Gatekeeper should allow normal first launch after install.
 
 ## First-run setup
 
