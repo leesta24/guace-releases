@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./guace-wordmark.png" alt="Guace" width="900" />
+  <img src="./guace-wordmark.png?v=2" alt="Guace" width="900" />
 </p>
 
 <h3 align="center">An AI-native personal knowledge base with powerful managed agents.</h3>
