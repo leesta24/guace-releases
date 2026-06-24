@@ -58,20 +58,20 @@ Pre-1.0. Schemas are still moving, and you're trusting a local-first app to run 
 
 | Platform | Download | Notes |
 | --- | --- | --- |
-| **macOS (Apple Silicon)** | [`Guace-0.0.3-arm64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-arm64.dmg) | Signed + notarized; requires macOS 10.12+ |
-| **macOS (Intel)** | [`Guace-0.0.3-x64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-x64.dmg) | Signed + notarized; requires macOS 10.12+ |
-| **macOS (Apple Silicon, zip)** | [`Guace-0.0.3-arm64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-arm64-mac.zip) | Same payload, no installer |
-| **macOS (Intel, zip)** | [`Guace-0.0.3-x64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/Guace-0.0.3-x64-mac.zip) | Same payload, no installer |
+| **macOS (Apple Silicon)** | [`Guace-0.0.4-arm64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.4/Guace-0.0.4-arm64.dmg) | Signed + notarized; opens normally with Gatekeeper |
+| **macOS (Intel)** | [`Guace-0.0.4-x64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.0.4/Guace-0.0.4-x64.dmg) | Signed + notarized; opens normally with Gatekeeper |
+| **macOS (Apple Silicon, zip)** | [`Guace-0.0.4-arm64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.4/Guace-0.0.4-arm64-mac.zip) | Same app payload, no DMG installer |
+| **macOS (Intel, zip)** | [`Guace-0.0.4-x64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.0.4/Guace-0.0.4-x64-mac.zip) | Same app payload, no DMG installer |
 
-Checksums are in [`SHA256SUMS.txt`](https://github.com/leesta24/guace-releases/releases/download/v0.0.3/SHA256SUMS.txt).
+Checksums are in [`SHA256SUMS.txt`](https://github.com/leesta24/guace-releases/releases/download/v0.0.4/SHA256SUMS.txt).
 
 ## Install
 
-1. Download the `.dmg` from the [latest release](../../releases/latest).
+1. Download the `.dmg` for your Mac from the [latest release](../../releases/latest).
 2. Open the `.dmg`, drag **Guace** to **Applications**.
 3. Launch from Launchpad / Spotlight.
 
-The DMG builds are signed and notarized with Apple Developer ID, so Gatekeeper should allow normal first launch after install.
+The DMG builds are signed and notarized with Apple Developer ID. On both Apple Silicon and Intel Macs, Gatekeeper should allow a normal first launch after install.
 
 ## First-run setup
 
