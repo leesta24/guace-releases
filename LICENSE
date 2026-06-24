@@ -1,0 +1,75 @@
+Guace Freeware License
+Version 1.0
+
+Copyright (c) 2026 leesta24. All rights reserved.
+
+This license applies to the official Guace binary releases published by
+leesta24, including the macOS application, DMG installers, ZIP archives,
+application assets, and accompanying release files in this repository.
+
+1. Free use
+
+You may download, install, and use official Guace binary releases for free on
+devices you own or control, including for personal work and internal business
+use.
+
+2. No source license
+
+Guace is proprietary software. The source code is not licensed for public use,
+copying, modification, distribution, or creation of derivative works.
+
+3. Restrictions
+
+Except where prohibited by applicable law, you may not:
+
+- copy, redistribute, mirror, sell, rent, lease, sublicense, or host Guace;
+- repackage, modify, patch, translate, or create derivative works of Guace;
+- remove or alter copyright, branding, license, signature, notarization, or
+  security notices;
+- reverse engineer, decompile, disassemble, or otherwise attempt to derive the
+  source code, internal design, or trade secrets of Guace;
+- use Guace to provide a hosted service, managed service, or commercial product
+  offering without prior written permission from the copyright holder;
+- represent modified, repackaged, or redistributed builds as official Guace
+  releases.
+
+4. Official distribution
+
+Official Guace builds are distributed only through channels authorized by
+leesta24. If you want to share Guace, link to the official website or official
+GitHub releases page instead of redistributing the application files.
+
+5. Third-party components
+
+Guace may include third-party open-source components. Those components remain
+licensed under their own license terms. This license does not limit any rights
+you may have under those third-party licenses.
+
+6. Updates and changes
+
+Future versions of Guace may be offered under different terms. Your rights in a
+specific version are governed by the license terms published for that version.
+
+7. Termination
+
+Your rights under this license terminate automatically if you violate these
+terms. After termination, you must stop using Guace and delete all copies in
+your possession or control.
+
+8. No warranty
+
+Guace is provided "as is" and "as available", without warranties of any kind,
+express or implied, including but not limited to warranties of merchantability,
+fitness for a particular purpose, title, and non-infringement.
+
+9. Limitation of liability
+
+To the maximum extent permitted by law, the copyright holder will not be liable
+for any indirect, incidental, special, consequential, exemplary, or punitive
+damages, or for any loss of profits, data, goodwill, or business opportunity,
+arising from or related to Guace or this license.
+
+10. Contact
+
+For permission to redistribute, repackage, integrate, or commercially license
+Guace, contact the maintainer through the official project channels.

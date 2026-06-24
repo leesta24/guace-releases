@@ -106,4 +106,9 @@ For private / security-sensitive reports, email the maintainer directly.
 
 ## License
 
-Binary releases are distributed under the terms shown in the private source repository. Reverse engineering / repackaging without permission isn't welcome; using the app on your own machine is.
+Guace is proprietary software. Official binary releases in this repository may
+be downloaded and used for free under the [Guace Freeware License](./LICENSE).
+
+The source code is not licensed for public use. Redistribution, repackaging,
+modification, reverse engineering, and resale are not permitted except where
+required by applicable law or with prior written permission.
