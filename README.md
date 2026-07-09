@@ -58,12 +58,12 @@ Pre-1.0. Schemas are still moving, and you're trusting a local-first app to run 
 
 | Platform | Download | Notes |
 | --- | --- | --- |
-| **macOS (Apple Silicon)** | [`Guace-0.1.3-arm64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.1.3/Guace-0.1.3-arm64.dmg) | Signed + notarized; opens normally with Gatekeeper |
-| **macOS (Intel)** | [`Guace-0.1.3-x64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.1.3/Guace-0.1.3-x64.dmg) | Signed + notarized; opens normally with Gatekeeper |
-| **macOS (Apple Silicon, zip)** | [`Guace-0.1.3-arm64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.1.3/Guace-0.1.3-arm64-mac.zip) | Same app payload, no DMG installer |
-| **macOS (Intel, zip)** | [`Guace-0.1.3-x64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.1.3/Guace-0.1.3-x64-mac.zip) | Same app payload, no DMG installer |
+| **macOS (Apple Silicon)** | [`Guace-0.1.4-arm64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.1.4/Guace-0.1.4-arm64.dmg) | Signed + notarized; opens normally with Gatekeeper |
+| **macOS (Intel)** | [`Guace-0.1.4-x64.dmg`](https://github.com/leesta24/guace-releases/releases/download/v0.1.4/Guace-0.1.4-x64.dmg) | Signed + notarized; opens normally with Gatekeeper |
+| **macOS (Apple Silicon, zip)** | [`Guace-0.1.4-arm64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.1.4/Guace-0.1.4-arm64-mac.zip) | Same app payload, no DMG installer |
+| **macOS (Intel, zip)** | [`Guace-0.1.4-x64-mac.zip`](https://github.com/leesta24/guace-releases/releases/download/v0.1.4/Guace-0.1.4-x64-mac.zip) | Same app payload, no DMG installer |
 
-Checksums are in [`SHA256SUMS.txt`](https://github.com/leesta24/guace-releases/releases/download/v0.1.3/SHA256SUMS.txt).
+Checksums are in [`SHA256SUMS.txt`](https://github.com/leesta24/guace-releases/releases/download/v0.1.4/SHA256SUMS.txt).
 
 ## Install
 
