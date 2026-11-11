@@ -52,23 +52,36 @@ carefully as commands you would run yourself; maintain backups of important file
 | --- | --- | --- |
 | macOS Apple Silicon | [0.3.4 DMG](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/Guace-0.3.4-arm64.dmg) | Developer ID signed and Apple notarized |
 | macOS Intel | [0.3.4 DMG](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/Guace-0.3.4-x64.dmg) | Developer ID signed and Apple notarized |
-| Windows x64 | [0.3.4 installer](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/Guace-0.3.4-windows-x64-setup.exe) | Unsigned NSIS; manual installation |
+| Windows x64 | [0.3.6 installer](https://github.com/leesta24/guace-releases/releases/download/v0.3.6/Guace-0.3.6-windows-x64-setup.exe) | Unsigned NSIS; install manually once to adopt the Windows update source |
 
-All three downloads are published in [v0.3.4](https://github.com/leesta24/guace-releases/releases/tag/v0.3.4),
-currently GitHub's global latest release (checked 2026-11-10).
-That release also provides Mac ZIPs, update feeds and
-[SHA-256 checksums](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/SHA256SUMS.txt).
+Windows is published in [v0.3.6](https://github.com/leesta24/guace-releases/releases/tag/v0.3.6);
+Mac remains at [v0.3.4](https://github.com/leesta24/guace-releases/releases/tag/v0.3.4),
+which is still GitHub's global latest release for existing Mac clients
+(checked 2026-11-11). Windows 0.3.6 retains the fix for Markdown previews moving
+left/right while Mermaid diagrams load and uses an independent Windows update
+source. No Mac 0.3.6 app has been published.
+
+Release assets include Mac ZIPs, update feeds and SHA-256 checksums for
+[Mac 0.3.4](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/SHA256SUMS.txt)
+and [Windows 0.3.6](https://github.com/leesta24/guace-releases/releases/download/v0.3.6/SHA256SUMS.txt).
 The repository-root `latest.json` and `SHA256SUMS.txt` still describe historical
 0.1.4 artifacts; use the files attached to the release you are downloading.
 
-Windows 0.3.3 does not auto-update: install 0.3.4 manually. Windows 0.3.4
-includes updater code and a published update feed, but signed Windows upgrades
-and an installed-version A-to-B automatic update have not been verified.
-Do not treat the presence of a feed as proof that automatic upgrades work.
+Older Windows clients, including 0.3.4/0.3.5, need one manual installation of
+0.3.6 to adopt the Windows-only update source; old binaries cannot change their
+embedded provider automatically. Subsequent compatible Windows versions use
+that source. Signed Windows upgrades and a full installed-version A-to-B
+automatic update have not been verified. A published feed alone does not
+establish that automatic upgrades work.
+
+Separate Windows and Mac stable feeds are available, but existing Mac 0.3.4
+clients have not migrated to the Mac-specific source. GitHub global latest
+remains 0.3.4 to preserve their working update path.
 
 ## Install and setup
 
-1. Download your platform's build from [guace.app](https://guace.app/).
+1. Download your platform's build from the table above. Website download routes
+   are unchanged by Windows 0.3.6 and may still offer an older Windows installer.
 2. Quit Guace before upgrading. macOS: open the DMG and drag Guace to Applications,
    replacing the older app. Windows: run the setup EXE; the unsigned beta
    installer may trigger SmartScreen. Review security warnings before proceeding.
@@ -88,7 +101,7 @@ Do not treat the presence of a feed as proof that automatic upgrades work.
 Vault location is user-configurable; Windows Documents may be redirected by the
 OS. Uninstalling the App does not imply deleting your Vault or credentials.
 
-In 0.3.4 on both platforms, the backend normally stops when you Quit the App.
+In Mac 0.3.4 and Windows 0.3.6, the backend normally stops when you Quit the App.
 It may continue after Quit only when Telegram is enabled and has a stored token.
 Saving a token alone does not enable background operation; disabling Telegram or
 clearing its token removes that permission. Closing a window is not the same as
@@ -103,17 +116,23 @@ Telegram. Existing Vault files, sessions and settings are retained on upgrade;
 <summary>Release evidence and verification limits</summary>
 
 The [0.3.4 release notes](https://github.com/leesta24/guace-releases/releases/tag/v0.3.4)
-are the current public record. The release includes the search, Graph, Mermaid,
-experimental Copilot and conditional-background changes above, rather than only
-source implementations awaiting their first public package.
+record the shared search, Graph, Mermaid, experimental Copilot and
+conditional-background changes. The
+[0.3.6 release notes](https://github.com/leesta24/guace-releases/releases/tag/v0.3.6)
+record Windows preview stability and the independent update source.
 
 - Mac download metadata:
   [latest.json](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/latest.json)
   and [latest-mac.yml](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/latest-mac.yml).
 - Windows download metadata:
-  [latest-windows.json](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/latest-windows.json)
-  and [latest.yml](https://github.com/leesta24/guace-releases/releases/download/v0.3.4/latest.yml).
-- The release reports packaged SQLite, Keychain, ONNX inference and clean-exit
+  [latest-windows.json](https://github.com/leesta24/guace-releases/releases/download/v0.3.6/latest-windows.json)
+  and [latest.yml](https://github.com/leesta24/guace-releases/releases/download/v0.3.6/latest.yml).
+- Independent stable feeds:
+  [Windows](https://github.com/leesta24/guace-releases/releases/download/windows-stable/latest.yml)
+  (0.3.6) and
+  [Mac](https://github.com/leesta24/guace-releases/releases/download/macos-stable/latest-mac.yml)
+  (0.3.4). Feed availability does not migrate installed clients.
+- The 0.3.4 release reports packaged SQLite, Keychain, ONNX inference and clean-exit
   checks for both Mac builds. Intel execution was checked through Rosetta on
   Apple Silicon; a physical Intel Mac and macOS 13 were not separately exercised.
 - Windows remains unsigned. Signed Windows A-to-B automatic-update acceptance
