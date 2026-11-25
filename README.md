@@ -64,10 +64,11 @@ For Mac ZIPs, version-specific installers and SHA-256 checksums, open **Assets**
 on the release matching your download. Do not use the historical `latest.json`
 or `SHA256SUMS.txt` in the repository root to verify a current installer.
 
-**Upgrading from Mac 0.3.4 or Windows 0.3.4/0.3.5?** Quit Guace and install the
-current build manually once. Builds from 0.3.6 onward use separate Mac and
-Windows update feeds. A full automatic upgrade from the legacy builds has not
-been verified on both platforms.
+**Upgrading from Mac 0.3.4 or Windows 0.3.4/0.3.5?** These versions check GitHub's
+global `Latest`, which now offers 0.3.8. A full automatic upgrade from those
+versions has not been verified; we recommend quitting Guace and installing your
+platform's build manually. From 0.3.6 onward, the app uses separate Mac and
+Windows update feeds.
 
 ## Install and setup
 
